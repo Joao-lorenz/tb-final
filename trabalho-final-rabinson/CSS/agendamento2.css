@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Poppins" , sans-serif;
+    line-height: 1.5;
+    --input-linear:
+    linear-gradient(120deg, #000000, #092666);
+    --input-error: red;
+    --button-linear:
+    linear-gradient(120deg, #000000, #32279f, #0089ff);
+    --button-disabled: #acacac;
+    --button-success:
+    rgb(18, 151, 107);
+    --white: #fff;
+    --black: #303030;
+    --gray: #929292;
+    --light-gray: #cfcfcf;
+    --border-height: 1px;
+  }
+
+.login {
+    height: 100vh;
+    background: var(--input-linear);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000040;
+  }
+  
+  .login__container {
+    min-height: 273px;
+    width: 275px;
+    background-color: gray;
+    box-sizing: border-box;
+    padding: 18px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+  }
+  
+  .login__title {
+    margin-bottom: 32px;
+    color: #0072ce;
+  }
+  
+  .login__form {
+    width: 91%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .login__input {
+    height: 26px;
+    width: 107%;
+    box-sizing: border-box;
+    padding-left: 8px;
+    border: unset;
+    outline: none;
+    position: relative;
+  }
+  
+  .login__input-border {
+    height: var(--border-height);
+    width: 100%;
+    margin-bottom: 16px;
+    background: var(--light-gray);
+    transition: .3s ease-in-out;
+  }
+  
+  .login__submit {
+    height: 47px;
+    /* left: -58px; */
+    width: 102%;
+    padding-left: 7px;
+    outline: none;
+    position: relative;
+    background: var(--button-linear);
+    background-size: 200%;
+    margin-bottom: 50px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    border: unset;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.5s ease;
+  }
+  
+  .login__submit:disabled {
+    background: var(--button-disabled);
+    cursor: not-allowed;
+  }
+  
+  .login__submit:hover {
+    background-position: right;
+  }
+  
+  .login__submit.success {
+    background: var(--button-success);
+  }
+  
+  .login__submit.error {
+    background: var(--input-error);
+  }
+  
+  .login__reset {
+    font-size: 12px;
+    color: #242468;
+    text-decoration: none;
+    padding-bottom: 14px;
+  }
+  
+  .row{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+    p {
+        font-size: 20px;
+  }
+
+  a.botao-login{
+    text-decoration: none;
+    color:rgb(212, 212, 212);
+  }
+
+  .button#editar:hover{
+    background-color: green;
+  }
+
+  button#excluir:hover{
+    background-color:red;
+  }

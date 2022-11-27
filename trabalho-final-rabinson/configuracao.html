@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="CSS/configuracao.css">
+     <!--ícones da tela principal -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <!--kite de icones do font awesome -->
+    <script src="https://kit.fontawesome.com/c9148900d2.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="sidebar">
+    <div class="logo-detalhes">
+      <img class="imagem-logo" src="../trabalho-final-rabinson/img/ABC__1_-removebg-preview.png">
+        <div class="logo_nome">ABC Logistics</div>
+        <i class='bx bx-menu' id="btn" ></i>
+    </div>
+    <ul class="nav-list">
+     <li>
+       <a href="agendamento.html">
+         <i class='bx bx-chat' ></i>
+         <span class="links_name">Agendamento</span>
+       </a>
+       <span class="tooltip">Agendamento</span>
+     </li>
+     <li>
+       <a href="relatorio.html">
+         <i class='bx bx-pie-chart-alt-2' ></i>
+         <span class="links_name">Relatório</span>
+       </a>
+       <span class="tooltip">Relatório</span>
+     </li>
+     <li>
+       <a href="configuracao.html">
+         <i class="fa-solid fa-gear"></i>
+         <span class="links_name">Configurações</span>
+       </a>
+       <span class="tooltip">Configurações</span>
+     </li>
+     <li>
+     <li class="profile">
+         <div class="profile-details">
+          
+           <div class="name_job">
+             <div class="name">João Arthur</div>
+           </div>
+          </div>
+          <div class="barra-branca">
+          <a href="login.html">
+          <i class='bx bx-log-out' id="log_out"></i></a>
+        </div>
+     </li>
+    </ul>
+  </div>
+  <script>
+  let sidebar = document.querySelector(".sidebar");
+  let closeBtn = document.querySelector("#btn");
+  let searchBtn = document.querySelector(".bx-search");
+ 
+  closeBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("open");
+    menuBtnChange();
+  });
+ 
+  searchBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("open");
+    menuBtnChange();
+  });
+ 
+ 
+  function menuBtnChange() {
+   if(sidebar.classList.contains("open")){
+     closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+   }else {
+     closeBtn.classList.replace("bx-menu-alt-right","bx-menu");
+   }
+  }
+  </script>
+
+<div class="configuration">
+    <h1>Configuração</h1><div class="div-config">
+<a href="#"><span class="trocar-senha">Trocar senha</span></i><br></a>
+<a href="#"><span class="trocar-senha">Horário de atendimento</span></i><br></a>
+<a href="#"><span class="trocar-senha">Agendamentos por hora</span></i><br></a>
+<a href="#"><span class="trocar-senha">Logo</span></i><br></a>
+<a href="#"><span class="trocar-senha">Imagem de fundo</span></i><br></a>
+<a href="#"><span class="trocar-senha">Frase da empresa</span></i><br></a>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col">
+          <h4>Companhia</h4>
+          <ul>
+            <li><a href="#">Sobre nós</a></li>
+            <li><a href="#">Outros Servicos</a></li>
+            <li><a href="#">Politica e privacidade</a></li>
+            <li><a href="#">Programa afiliado</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Treinamento</h4>
+          <ul>
+            <li><a href="#">Logística Operacional</a></li>
+            <li><a href="#">Logística e Cadeia de Suprimentos</a></li>
+            <li><a href="#">Gestão de Custos Logísticos</a></li>
+            <li><a href="#">Noções de Logística Online</a></li>
+            <li><a href="#">Processamento de pedidos</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Endereço</h4>
+          <ul>
+            <li><a href="#">R. Francisco Reis, 1402 - Cordeiros, Itajaí</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contato</h4>
+          <div class="form-sub">
+            <form>
+                <input type="email" placeholder="Digite o seu e-mail" required>
+                <button>subscrever</button>
+            </form>
+          <div class="footer-cop">
+            Todos os direitos reservados 
+          </div>
+        </div>
+          <div class="social-links">
+          </div>
+        </div>
+      </div>
+    </div>
+    </footer>
+  </body>
+  </html>

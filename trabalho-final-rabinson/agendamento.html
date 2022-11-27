@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="CSS/agendamento.css">
+    <!--ícones da tela principal -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+<!--kite de icones do font awesome -->
+    <script src="https://kit.fontawesome.com/c9148900d2.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  
+  <div class="sidebar">
+    <div class="logo-details">
+      <img class="imagem-logo" src="../trabalho-final-rabinson/img/ABC__1_-removebg-preview.png">
+        <div class="logo_name">ABC Logistics</div>
+        <i class='bx bx-menu' id="btn" ></i>
+    </div>
+    <ul class="nav-list">
+     <li>
+       <a href="agendamento.html">
+         <i class='bx bx-chat' ></i>
+         <span class="links_name">Agendamento</span>
+       </a>
+       <span class="tooltip">Agendamento</span>
+     </li>
+     <li>
+       <a href="relatorio.html">
+         <i class='bx bx-pie-chart-alt-2' ></i>
+         <span class="links_name">Relatório</span>
+       </a>
+       <span class="tooltip">Relatório</span>
+     </li>
+     <li>
+       <a href="configuracao.html">
+         <i class="fa-solid fa-gear"></i>
+         <span class="links_name">Configurações</span>
+       </a>
+       <span class="tooltip">Configurações</span>
+     </li>
+     <li>
+     <li class="profile">
+         <div class="profile-details">
+          
+           <div class="name_job">
+             <div class="name">João Arthur</div>
+           </div>
+          </div>
+          <div class="barra-branca">
+          <a href="login.html">
+          <i class='bx bx-log-out' id="log_out"></i></a>
+        </div>
+     </li>
+    </ul>
+  </div>
+
+  <!--Cabeçalho lateral -->
+  <script>
+  let sidebar = document.querySelector(".sidebar");
+  let closeBtn = document.querySelector("#btn");
+  let searchBtn = document.querySelector(".bx-search");
+ 
+  closeBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("open");
+    menuBtnChange();
+  });
+ 
+  searchBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("open");
+    menuBtnChange();
+  });
+ 
+ 
+  function menuBtnChange() {
+   if(sidebar.classList.contains("open")){
+     closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+   }else {
+     closeBtn.classList.replace("bx-menu-alt-right","bx-menu");
+   }
+  }
+  </script>
+
+
+     <div class="box">
+      <form action="">
+          <fieldset>
+              <legend><b>Agendamento</b></legend>
+              <br>
+              <div class="inputBox">
+                  <input type="text" name="nome" id="nome" class="inputUser" required>
+                  <label for="nome" class="labelInput">Nome completo</label>
+              </div>
+              <br><br>
+              <div class="inputBox">
+                  <input type="text" name="email" id="email" class="inputUser" required>
+                  <label for="email" class="labelInput">Email</label>
+              </div>
+              <br><br>
+              <div class="inputBox">
+                  <input type="tel" name="telefone" id="telefone" class="inputUser" required>
+                  <label for="telefone" class="labelInput">Telefone</label>
+              </div>
+              <p>Sexo:</p>
+              <input type="radio" id="feminino" name="genero" value="feminino" required>
+              <label for="feminino">Feminino</label>
+              <br>
+              <input type="radio" id="masculino" name="genero" value="masculino" required>
+              <label for="masculino">Masculino</label>
+              <br>
+              <input type="radio" id="outro" name="genero" value="outro" required>
+              <label for="outro">Outro</label>
+              <br><br>
+              <label for="data_nascimento"><b>Data de Nascimento:</b></label>
+              <input type="datetime-local" id="meeting-time">
+              <br><br><br>
+              <label for="cidade_local"><b>Cidade</b></label>
+              <select name="select">
+                <option value="AC">AC</option>
+                <option value="AL">AL</option>
+                <option value="AP">AP</option>
+                <option value="AM">AM</option>
+                <option value="BA">BA</option>
+                <option value="CE">CE</option>
+                <option value="DF">DF</option>
+                <option value="ES">ES</option>
+                <option value="GO">GO</option>
+                <option value="MA">MA</option>
+                <option value="MT">MT</option>
+                <option value="MS">MS</option>
+                <option value="PA">PA</option>
+                <option value="PB">PB</option>
+                <option value="PR">PR</option>
+                <option value="PE">PE</option>
+                <option value="PI">PI</option>
+                <option value="RJ">RJ</option>
+                <option value="RN">RN</option>
+                <option value="RS">RS</option>
+                <option value="RO">RO</option>
+                <option value="RR">RR</option>
+                <option value="SC" selected>SC</option>
+                <option value="SP">SP</option>
+                <option value="SE">SE</option>
+                <option value="TO">TO</option>
+            </select>
+              <br><br>
+              <button class="login__submit"><a class="botao-login" href="agendamento_concluido.html">Agendar</button></a>
+          </fieldset>
+      </form>
+  </div>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="footer-col">
+        <h4>Companhia</h4>
+        <ul>
+          <li><a href="#">Sobre nós</a></li>
+          <li><a href="#">Outros Servicos</a></li>
+          <li><a href="#">Politica e privacidade</a></li>
+          <li><a href="#">Programa afiliado</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Treinamento</h4>
+        <ul>
+          <li><a href="#">Logística Operacional</a></li>
+          <li><a href="#">Logística e Cadeia de Suprimentos</a></li>
+          <li><a href="#">Gestão de Custos Logísticos</a></li>
+          <li><a href="#">Noções de Logística Online</a></li>
+          <li><a href="#">Processamento de pedidos</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Endereço</h4>
+        <ul>
+          <li><a href="#">R. Francisco Reis, 1402 - Cordeiros, Itajaí</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contato</h4>
+        <div class="form-sub">
+          <form>
+              <input type="email" placeholder="Digite o seu e-mail" required>
+              <button>subscrever</button>
+          </form>
+        <div class="footer-cop">
+          Todos os direitos reservados 
+        </div>
+      </div>
+        <div class="social-links">
+        </div>
+      </div>
+    </div>
+  </div>
+  </footer>
+</body>
+</html>
